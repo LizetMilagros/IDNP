@@ -24,7 +24,6 @@ public class Register extends Fragment {
     Button login, register;
     DBusuario DB;
     CallbackFragment callbackFragment;
-    //String userName, pass;
     SharedPreferences sharedPreferences;
     SharedPreferences.Editor editor;
 
@@ -66,26 +65,24 @@ public class Register extends Fragment {
                 String repass = confirmPassword.getText().toString();
 
                 if (user.equals("") || pass.equals("") || repass.equals(""))
-                    Toast.makeText(getContext(), "Please enter all the fields", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getContext(), "Por favor ingrese todos los campos", Toast.LENGTH_SHORT).show();
                 else {
                     if (pass.equals(repass)) {
                         Boolean checkuser = DB.checkusername(user);
                         if (checkuser == false) {
                             Boolean insert = DB.insertData(user, pass);
                             if (insert == true) {
-                                Toast.makeText(getContext(), "Registered successfully", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(getContext(), "Registrado correctamente", Toast.LENGTH_SHORT).show();
                                 Intent intent = new Intent(getContext(), MainActivity.class);
                                 startActivity(intent);
-                                //deberia llevar a login
-                                //callbackFragment.changeFragment();
                             } else {
-                                Toast.makeText(getContext(), "Registration failed", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(getContext(), "Registro fallido", Toast.LENGTH_SHORT).show();
                             }
                         } else {
-                            Toast.makeText(getContext(), "User already exists! please sign in", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getContext(), "¡El usuario ya existe! Por favor, registrese", Toast.LENGTH_SHORT).show();
                         }
                     } else {
-                        Toast.makeText(getContext(), "Passwords not matching", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getContext(), "Las contraseñas no coinciden", Toast.LENGTH_SHORT).show();
                     }
                 }
             }

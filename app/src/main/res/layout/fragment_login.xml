@@ -53,10 +53,10 @@
                 android:layout_margin="20dp"
                 android:layout_weight="1"
                 android:background="@drawable/botones1"
-                android:drawableStart="@drawable/ic_email"
+                android:drawableStart="@drawable/ic_person"
                 android:drawablePadding="16dp"
                 android:ems="10"
-                android:hint="Email"
+                android:hint="Nombre de usuario"
                 android:padding="16dp"
                 android:inputType="textEmailAddress"
                 />
@@ -71,7 +71,7 @@
                 android:drawableStart="@drawable/ic_lock"
                 android:drawablePadding="16dp"
                 android:ems="10"
-                android:hint="Password"
+                android:hint="Contraseña"
                 android:inputType="textPassword"
                 android:padding="16dp" />
 
@@ -99,7 +99,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="Or" />
+                    android:text="O" />
 
                 <Button
                     android:id="@+id/btnRegister"
@@ -108,7 +108,7 @@
                     android:layout_margin="20dp"
                     android:layout_weight="1"
                     android:background="#ffffff"
-                    android:text="New user? Register now"
+                    android:text="Nuevo usuario? Registrate ahora"
                     android:textColor="#28D78B"
                     android:textSize="20sp"
                     android:textStyle="bold" />

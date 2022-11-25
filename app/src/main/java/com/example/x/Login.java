@@ -20,11 +20,10 @@ import DataBase.DBusuario;
 
 public class Login extends Fragment {
 
-    EditText username, password, confirmPassword;
+    EditText username, password, confirssword;
     Button login, register;
     DBusuario DB;
     CallbackFragment callbackFragment;
-    //String userName, pass;
     SharedPreferences sharedPreferences;
     SharedPreferences.Editor editor;
 
@@ -71,15 +70,15 @@ public class Login extends Fragment {
                 String pass = password.getText().toString();
 
                 if(user.equals("")||pass.equals(""))
-                    Toast.makeText(getContext(), "Please enter all the fields", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getContext(), "Por favor ingrese todos los campos", Toast.LENGTH_SHORT).show();
                 else{
                     Boolean checkuserpass = DB.checkusernamepassword(user, pass);
                     if(checkuserpass==true){
-                        Toast.makeText(getContext(), "Sign in successfull", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getContext(), "Inicio de sesión exitoso", Toast.LENGTH_SHORT).show();
                         Intent intent  = new Intent(getContext(), MenuActivity.class);
                         startActivity(intent);
                     }else{
-                        Toast.makeText(getContext(), "Invalid Credentials", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getContext(), "Credenciales no válidas", Toast.LENGTH_SHORT).show();
                     }
                 }
             }
