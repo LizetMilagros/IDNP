@@ -10,5 +10,12 @@
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="RegistrarPlastico">Registrar</string>
+    <string name="TiposPlastico">Tipos</string>
+    <string name="TipsPlastico">Tips</string>
+    <string name="HuellaPlastico">Huella</string>
+    <string name="Estadisticas">Estadisticas</string>
+    <string name="menu_plasticos">Menu Plasticos</string>
+    <string name="extra">extra</string>
+    <string name="extra1">extra</string>
 </resources>

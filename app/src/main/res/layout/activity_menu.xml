@@ -7,14 +7,175 @@
     android:orientation="vertical"
     tools:context=".MenuActivity">
 
-
-    <TextView
+    <LinearLayout
+        android:id="@+id/LinearLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_margin="20dp"
-        android:layout_weight="1"
-        android:gravity="center"
-        android:text="MENU" />
+        android:layout_height="50dp"
+        android:orientation="horizontal">
 
+        <Button
+            android:id="@+id/textPlastico"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="#A2CBD8"
+            android:fontFamily="@drawable/botella"
+            android:text="@string/menu_plasticos"
+            android:textColor="#000000"
+            android:textColorHint="#000000"
+            android:textSize="18sp"
+            android:textStyle="italic" />
+
+    </LinearLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="467dp"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <!--    <ImageView-->
+    <!--        android:id="@+id/imageView1"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:src="@drawable/second"-->
+    <!--        android:scaleType="centerCrop"-->
+    <!--        android:layout_marginTop="16dp"/>-->
+
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_margin="20sp"
+        android:stretchColumns="*">
+
+        <TableRow>
+
+            <ImageButton
+                android:id="@+id/ButtonRegistrarPlastico"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/RegistrarPlastico"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/registrar"
+                tools:ignore="SpeakableTextPresentCheck,DuplicateSpeakableTextCheck" />
+
+            <ImageButton
+                android:id="@+id/ButtonTiposPlastico"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/TiposPlastico"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/tipos"
+                tools:ignore="SpeakableTextPresentCheck,DuplicateSpeakableTextCheck" />
+
+            <ImageButton
+                android:id="@+id/ButtonHuellaPlastico"
+                android:layout_width="40dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="5dp"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/HuellaPlastico"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/huellas"
+                tools:ignore="SpeakableTextPresentCheck,DuplicateSpeakableTextCheck" />
+
+        </TableRow>
+
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/Registrarplastico"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="@drawable/botella"
+                android:text="@string/RegistrarPlastico"
+                android:textColor="#000000"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tipos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:text="@string/TiposPlastico"
+                android:textColor="#000000"
+                android:textSize="15sp" />
+            <TextView
+                android:id="@+id/Huella"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="@drawable/huellas"
+                android:text="@string/HuellaPlastico"
+                android:textColor="#000000"
+                android:textSize="15sp" />
+        </TableRow>
+
+
+        <TableRow android:layout_height="23dp">
+
+            <ImageButton
+                android:id="@+id/ButtonEstadistica"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="5dp"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/Estadisticas"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/estadistica"
+                tools:ignore="SpeakableTextPresentCheck,DuplicateSpeakableTextCheck" />
+
+            <ImageButton
+                android:id="@+id/ButtonTips"
+                android:layout_width="40dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="5dp"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/TipsPlastico"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/tips"
+                tools:ignore="SpeakableTextPresentCheck,DuplicateSpeakableTextCheck" />
+
+        </TableRow>
+
+
+        <TableRow>
+            <TextView
+                android:id="@+id/Estadisticas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="@drawable/estadistica"
+                android:text="@string/Estadisticas"
+                android:textColor="#000000"
+                android:textSize="15sp" />
+            <TextView
+                android:id="@+id/TipsPlastico"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="@drawable/tips"
+                android:text="@string/TipsPlastico"
+                android:textColor="#000000"
+                android:textSize="15sp" />
+        </TableRow>
+
+    </TableLayout>
 
 </LinearLayout>
