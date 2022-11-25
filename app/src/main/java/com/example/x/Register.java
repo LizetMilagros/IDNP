@@ -1,5 +1,6 @@
 package com.example.x;
 
+
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -20,7 +21,7 @@ import DataBase.DBusuario;
 
 public class Register extends Fragment {
 
-    EditText username, password, confirmPassword;
+    EditText user,correo, password, confirmPassword;
     Button login, register;
     DBusuario DB;
     CallbackFragment callbackFragment;
@@ -51,7 +52,8 @@ public class Register extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_register, container, false);
 
-        username = view.findViewById(R.id.txtNameUser);
+        user = view.findViewById(R.id.txtName);
+        correo = view.findViewById(R.id.txtNameUser);
         password =  view.findViewById(R.id.txtPassword);
         confirmPassword =  view.findViewById(R.id.txtConfirmPassword);
         register =  view.findViewById(R.id.btnRegister);
@@ -60,17 +62,18 @@ public class Register extends Fragment {
         register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String user = username.getText().toString();
+                String userName = user.getText().toString();
+                String corr = correo.getText().toString();
                 String pass = password.getText().toString();
                 String repass = confirmPassword.getText().toString();
 
-                if (user.equals("") || pass.equals("") || repass.equals(""))
+                if (userName.equals("") || corr.equals("")|| pass.equals("") || repass.equals(""))
                     Toast.makeText(getContext(), "Por favor ingrese todos los campos", Toast.LENGTH_SHORT).show();
                 else {
                     if (pass.equals(repass)) {
-                        Boolean checkuser = DB.checkusername(user);
+                        Boolean checkuser = DB.checkusername(corr);
                         if (checkuser == false) {
-                            Boolean insert = DB.insertData(user, pass);
+                            Boolean insert = DB.insertData(corr, pass);
                             if (insert == true) {
                                 Toast.makeText(getContext(), "Registrado correctamente", Toast.LENGTH_SHORT).show();
                                 Intent intent = new Intent(getContext(), MainActivity.class);
