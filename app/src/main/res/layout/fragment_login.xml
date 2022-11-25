@@ -107,7 +107,7 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="20dp"
                     android:layout_weight="1"
-                    android:background="ffffff"
+                    android:background="#ffffff"
                     android:text="New user? Register now"
                     android:textColor="#28D78B"
                     android:textSize="20sp"
