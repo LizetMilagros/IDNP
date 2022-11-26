@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/tiposPlastico"
+            android:icon="@drawable/tipos"
+            android:title="Tipos De Plastico" />
+        <item
+            android:id="@+id/registrarPlastico"
+            android:icon="@drawable/registrar"
+            android:title="Registrar Plastico" />
+        <item
+            android:id="@+id/huellaPlastico"
+            android:icon="@drawable/huellas"
+            android:title="Huella de Plastico" />
+        <item
+            android:id="@+id/tipsPlastico"
+            android:icon="@drawable/tips"
+            android:title="Tips De Plastico" />
+        <item
+            android:id="@+id/estadisticaPlastico"
+            android:icon="@drawable/estadistica"
+            android:title="Estadisticas de Plastico" />
+
+    </group>
+
+</menu>

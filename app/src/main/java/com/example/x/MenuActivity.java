@@ -1,70 +1,86 @@
 package com.example.x;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
-import android.view.View;
-import android.widget.Button;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
+
 import android.os.Bundle;
-import android.widget.Button;
-import android.widget.ImageButton;
+import android.view.ContextMenu;
+import android.view.MenuItem;
+import android.view.View;
 
-public class MenuActivity extends AppCompatActivity implements View.OnClickListener {
+import com.google.android.material.navigation.NavigationView;
 
-    ImageButton mBtnOne, mBtnTwo, mBtnThree, mBtnFour,mBtnFive;
+public class MenuActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
+    private DrawerLayout drawerLayout;
+    public static Toolbar toolbar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
 
-        mBtnOne = findViewById(R.id.ButtonRegistrarPlastico);
-        mBtnTwo = findViewById(R.id.ButtonTiposPlastico);
-        mBtnThree = findViewById(R.id.ButtonHuellaPlastico);
-        mBtnFour = findViewById(R.id.ButtonEstadistica);
-        mBtnFive = findViewById(R.id.ButtonTips);
 
-        mBtnOne.setOnClickListener(this);
-        mBtnTwo.setOnClickListener(this);
-        mBtnThree.setOnClickListener(this);
-        mBtnFour.setOnClickListener(this);
-        mBtnFive.setOnClickListener(this);
+        toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
 
+        drawerLayout = findViewById(R.id.menuPlasticos);
+        NavigationView navigationView = findViewById(R.id.main_navigationview);
+        navigationView.setNavigationItemSelectedListener(this);
+
+
+        ActionBarDrawerToggle actionBarDrawerToggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar,
+                R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+
+        drawerLayout.addDrawerListener(actionBarDrawerToggle);
+        actionBarDrawerToggle.syncState();
+
+        if(savedInstanceState == null) {
+            getSupportFragmentManager().beginTransaction().replace(R.id.main_fragment,
+                    new TiposPlasticoFragment()).commit();
+            navigationView.setCheckedItem(R.id.tiposPlastico);
+        }
     }
 
     @Override
-    public void onClick(View view) {
-        switch(view.getId()){
-            case R.id.ButtonRegistrarPlastico:
-                RegistrarPlasticoFragment firstFragment = new RegistrarPlasticoFragment();
-                FragmentManager fragmentManager = getSupportFragmentManager();
-                fragmentManager.beginTransaction().replace(R.id.LinearLayout,firstFragment,firstFragment.getTag()).commit();
-                break;
-
-            case R.id.ButtonTiposPlastico:
-                TiposPlasticoFragment secondFragment = new TiposPlasticoFragment();
-                FragmentManager fragmentManager1 = getSupportFragmentManager();
-                fragmentManager1.beginTransaction().replace(R.id.LinearLayout,secondFragment,secondFragment.getTag()).commit();
-                break;
-
-            case R.id.ButtonHuellaPlastico:
-                HuellaPlasticoFragment thirdFragment = new HuellaPlasticoFragment();
-                FragmentManager fragmentManager2 = getSupportFragmentManager();
-                fragmentManager2.beginTransaction().replace(R.id.LinearLayout,thirdFragment,thirdFragment.getTag()).commit();
-                break;
-
-            case R.id.ButtonEstadistica:
-                EstadisticaPlasticoFragment fourFragment = new EstadisticaPlasticoFragment();
-                FragmentManager fragmentManager3 = getSupportFragmentManager();
-                fragmentManager3.beginTransaction().replace(R.id.LinearLayout,fourFragment,fourFragment.getTag()).commit();
-                break;
-
-            case R.id.ButtonTips:
-                TipsPlasticoFragment fiveFragment = new TipsPlasticoFragment();
-                FragmentManager fragmentManager4 = getSupportFragmentManager();
-                fragmentManager4.beginTransaction().replace(R.id.LinearLayout,fiveFragment,fiveFragment.getTag()).commit();
-                break;
-
+    public void onBackPressed() {
+        if(drawerLayout.isDrawerOpen(GravityCompat.START)){
+            drawerLayout.closeDrawer(GravityCompat.START);
+        }else{
+            super.onBackPressed();
         }
     }
+
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+        switch (menuItem.getItemId()){
+            case R.id.registrarPlastico:
+                getSupportFragmentManager().beginTransaction().replace(R.id.main_fragment,
+                        new RegistrarPlasticoFragment()).commit();
+                break;
+            case R.id.tiposPlastico:
+                getSupportFragmentManager().beginTransaction().replace(R.id.main_fragment,
+                        new TiposPlasticoFragment()).commit();
+                break;
+            case R.id.huellaPlastico:
+                getSupportFragmentManager().beginTransaction().replace(R.id.main_fragment,
+                        new HuellaPlasticoFragment()).commit();
+                break;
+            case R.id.tipsPlastico:
+                getSupportFragmentManager().beginTransaction().replace(R.id.main_fragment,
+                        new TipsPlasticoFragment()).commit();
+                break;
+            case R.id.estadisticaPlastico:
+                getSupportFragmentManager().beginTransaction().replace(R.id.main_fragment,
+                        new EstadisticaPlasticoFragment()).commit();
+                break;
+        }
+
+        drawerLayout.closeDrawer(GravityCompat.START);
+        return true;
+    }
+
 }

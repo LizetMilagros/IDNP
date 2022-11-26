@@ -18,4 +18,14 @@
     <string name="menu_plasticos">Menu Plasticos</string>
     <string name="extra">extra</string>
     <string name="extra1">extra</string>
+
+
+
+
+    <string name="navigation_drawer_open">Abrindo navigation drawer</string>
+    <string name="navigation_drawer_close">Fechando navigation drawer</string>
+    <string name="limpar">Limpar</string>
+    <string name="salvar">Salvar</string>
+    <string name="correo_email_com">correo@email.com</string>
+    <string name="nombre_de_usuario">Nombre de Usuario</string>
 </resources>
