@@ -52,15 +52,15 @@
                 />
             <EditText
                 android:id="@+id/Descripcion"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_width="343dp"
+                android:layout_height="63dp"
                 android:layout_margin="20dp"
                 android:layout_weight="1"
                 android:hint="Describa "
                 android:inputType="textPassword" />
             <TextView
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
+                android:layout_width="343dp"
+                android:layout_height="63dp"
                 android:layout_margin="20dp"
                 android:text ="Tipo"
                 android:textSize="20sp" />
@@ -69,14 +69,12 @@
                 android:layout_width="100dp"
                 android:layout_height="40dp"
                 android:layout_margin="20dp"
-                android:textAlignment=""
-                android:te="asd"
                 />
 
             <Button
                 android:id="@+id/btnRegister"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_width="343dp"
+                android:layout_height="63dp"
                 android:layout_margin="20dp"
                 android:layout_weight="1"
                 android:background="@drawable/botones"

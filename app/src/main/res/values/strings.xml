@@ -28,4 +28,12 @@
     <string name="salvar">Salvar</string>
     <string name="correo_email_com">correo@email.com</string>
     <string name="nombre_de_usuario">Nombre de Usuario</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="registrar">Registrar Plastico</string>
+    <string name="tipo">Tipo</string>
+    <string name="describa">Describcion</string>
+    <string name="registre_nuevo_plastico">Registre nuevo plastico</string>
+    <string name="descripcion">Descripcion</string>
+    <string name="agregue_una_foto">Agregue una foto</string>
+    <string name="plastico">plastico</string>
 </resources>
