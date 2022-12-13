@@ -5,6 +5,10 @@
 
     <group android:checkableBehavior="single">
         <item
+            android:id="@+id/misRegistros"
+            android:icon="@drawable/lista"
+            android:title="Mis Registros" />
+        <item
             android:id="@+id/tiposPlastico"
             android:icon="@drawable/tipos"
             android:title="Tipos De Plastico" />

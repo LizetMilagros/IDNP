@@ -40,8 +40,8 @@ public class MenuActivity extends AppCompatActivity implements NavigationView.On
 
         if(savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction().replace(R.id.main_fragment,
-                    new TiposPlasticoFragment()).commit();
-            navigationView.setCheckedItem(R.id.tiposPlastico);
+                    new misRegistrosFragment()).commit();
+            navigationView.setCheckedItem(R.id.misRegistros);
         }
     }
 
@@ -57,6 +57,10 @@ public class MenuActivity extends AppCompatActivity implements NavigationView.On
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
         switch (menuItem.getItemId()){
+            case R.id.misRegistros:
+                getSupportFragmentManager().beginTransaction().replace(R.id.main_fragment,
+                        new misRegistrosFragment()).commit();
+                break;
             case R.id.registrarPlastico:
                 getSupportFragmentManager().beginTransaction().replace(R.id.main_fragment,
                         new RegistrarPlasticoFragment()).commit();

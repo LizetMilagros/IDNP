@@ -20,8 +20,6 @@
     <string name="extra1">extra</string>
 
 
-
-
     <string name="navigation_drawer_open">Abrindo navigation drawer</string>
     <string name="navigation_drawer_close">Fechando navigation drawer</string>
     <string name="limpar">Limpar</string>
@@ -70,4 +68,6 @@
     <string name="type_seven">Otro</string>
     <string name="properties_seven">Incluye de muchas otras resinas y materiales. Sus propiedades dependen de la combinación de otros plásticos.</string>
     <string name="uses_seven">Auto partes, hieleras, electrónicos y piezas para empaques.</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
