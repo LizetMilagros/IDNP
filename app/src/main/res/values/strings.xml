@@ -36,4 +36,38 @@
     <string name="descripcion">Descripcion</string>
     <string name="agregue_una_foto">Agregue una foto</string>
     <string name="plastico">plastico</string>
+
+
+    <string name="code_one_name">PET</string>
+    <string name="code_two_name">PEHD</string>
+    <string name="code_three_name">PVC</string>
+    <string name="code_four_name">PEBD</string>
+    <string name="code_five_name">PP</string>
+    <string name="code_six_name">PS</string>
+    <string name="code_seven_name">OTHER</string>
+    <string name="code">Código</string>
+    <string name="type">Tipo de polímero plástico</string>
+    <string name="properties">Propiedades</string>
+    <string name="uses">Usos</string>
+    <string name="type_one">Tereftalato de polietileno</string>
+    <string name="properties_one">Claridad, dureza, resistencia, barrera a los gases y al vapor.</string>
+    <string name="uses_one">Bebidas gaseosas, botellas de agua y de condimentos para ensaladas, frascos de mermeladas</string>
+    <string name="type_two">Polietileno de alta densidad</string>
+    <string name="properties_two">Poco flexible, resistente a químicos, opaco, fácil de pigmentar, fabricar y manejar</string>
+    <string name="uses_two">Bolsas de supermercado, bolsas para congelar, envases para leche, helados, jugos, shampoo, químicos y detergentes, cubetas, tapas, etc.</string>
+    <string name="type_three">Policloruro de vinilo</string>
+    <string name="properties_three">Es duro, resistente, puede ser claro, puede ser utilizado con solventes</string>
+    <string name="uses_three">Envases para plomería, tuberías, envases en general, mangueras, suelas para zapatos, cables y correas para reloj</string>
+    <string name="type_four">Polietileno de baja densidad</string>
+    <string name="properties_four">Suave, flexible, traslucido, se raya fácilmente</string>
+    <string name="uses_four">Película para empaque, bolsas para basura y envases para laboratorio</string>
+    <string name="type_five">Polipropileno</string>
+    <string name="properties_five">Díficil pero aún flexible, traslucido, soporta solventes y versátil.</string>
+    <string name="uses_five">Bolsas para frituras, popotes, equipo para jardinería, cajas para alimentos, cintas para empacar, envases para uso veterinario y farmacéutico.</string>
+    <string name="type_six">Poliestireno</string>
+    <string name="properties_six">Claro, rígido, opaco, se rompe con facilidad. Afectado por grasas y solventes.</string>
+    <string name="uses_six">Cajas para discos compactos, cubiertos de plástico, imitaciones de cristal, jueguetes, envases cosméticos.</string>
+    <string name="type_seven">Otro</string>
+    <string name="properties_seven">Incluye de muchas otras resinas y materiales. Sus propiedades dependen de la combinación de otros plásticos.</string>
+    <string name="uses_seven">Auto partes, hieleras, electrónicos y piezas para empaques.</string>
 </resources>
