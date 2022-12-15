@@ -7,6 +7,7 @@
         android:id="@+id/scrollView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:foregroundGravity="center"
         android:paddingLeft="12dp"
         android:paddingRight="12dp">
 
@@ -27,6 +28,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:paddingTop="16dp"
                 android:text="@string/type"
                 android:textColor="#000"
@@ -35,12 +37,14 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:paddingTop="16dp"
                 android:text="@string/type_one" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:paddingTop="16dp"
                 android:text="@string/properties"
                 android:textColor="#000"
@@ -49,12 +53,14 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:paddingTop="16dp"
                 android:text="@string/properties_one" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:paddingTop="16dp"
                 android:text="@string/uses"
                 android:textColor="#000"
@@ -63,6 +69,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:paddingTop="16dp"
                 android:text="@string/uses_one" />
 
@@ -77,6 +84,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:paddingTop="16dp"
                 android:text="@string/type"
                 android:textColor="#000"
@@ -85,12 +93,14 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:paddingTop="16dp"
                 android:text="@string/type_two" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:paddingTop="16dp"
                 android:text="@string/properties"
                 android:textColor="#000"
@@ -99,12 +109,14 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:paddingTop="16dp"
                 android:text="@string/properties_two" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:paddingTop="16dp"
                 android:text="@string/uses"
                 android:textColor="#000"
@@ -114,6 +126,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingTop="16dp"
+                android:gravity="center"
                 android:text="@string/uses_two" />
 
             <ImageView
@@ -128,6 +141,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingTop="16dp"
+                android:gravity="center"
                 android:text="@string/type"
                 android:textColor="#000"
                 android:textSize="20sp" />
@@ -135,12 +149,14 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:paddingTop="16dp"
                 android:text="@string/type_three" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:paddingTop="16dp"
                 android:text="@string/properties"
                 android:textColor="#000"
@@ -149,12 +165,14 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:paddingTop="16dp"
                 android:text="@string/properties_three" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:paddingTop="16dp"
                 android:text="@string/uses"
                 android:textColor="#000"
@@ -163,6 +181,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:paddingTop="16dp"
                 android:text="@string/uses_three" />
 
@@ -177,6 +196,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:paddingTop="16dp"
                 android:text="@string/type"
                 android:textColor="#000"
@@ -185,12 +205,14 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:paddingTop="16dp"
                 android:text="@string/type_four" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:paddingTop="16dp"
                 android:text="@string/properties"
                 android:textColor="#000"
@@ -199,12 +221,14 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:paddingTop="16dp"
                 android:text="@string/properties_four" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:paddingTop="16dp"
                 android:text="@string/uses"
                 android:textColor="#000"
@@ -213,6 +237,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:paddingTop="16dp"
                 android:text="@string/uses_four" />
 
@@ -220,6 +245,7 @@
                 android:id="@+id/image5View"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:layout_gravity="center"
                 android:paddingTop="16dp"
                 android:src="@mipmap/ic_cinco" />
@@ -227,6 +253,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:paddingTop="16dp"
                 android:text="@string/type"
                 android:textColor="#000"
@@ -235,12 +262,14 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:paddingTop="16dp"
                 android:text="@string/type_five" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:paddingTop="16dp"
                 android:text="@string/properties"
                 android:textColor="#000"
@@ -249,12 +278,14 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:paddingTop="16dp"
                 android:text="@string/properties_five" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:paddingTop="16dp"
                 android:text="@string/uses"
                 android:textColor="#000"
@@ -263,6 +294,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:paddingTop="16dp"
                 android:text="@string/uses_five" />
 
@@ -285,12 +317,14 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:paddingTop="16dp"
                 android:text="@string/type_six" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:paddingTop="16dp"
                 android:text="@string/properties"
                 android:textColor="#000"
@@ -299,12 +333,14 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:paddingTop="16dp"
                 android:text="@string/properties_six" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:paddingTop="16dp"
                 android:text="@string/uses"
                 android:textColor="#000"
@@ -313,6 +349,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:paddingTop="16dp"
                 android:text="@string/uses_six" />
 
@@ -327,6 +364,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:paddingTop="16dp"
                 android:text="@string/type"
                 android:textColor="#000"
@@ -335,12 +373,14 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:paddingTop="16dp"
                 android:text="@string/type_seven" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:paddingTop="16dp"
                 android:text="@string/properties"
                 android:textColor="#000"
@@ -349,12 +389,14 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:paddingTop="16dp"
                 android:text="@string/properties_seven" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:paddingTop="16dp"
                 android:text="@string/uses"
                 android:textColor="#000"
@@ -363,6 +405,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:paddingTop="16dp"
                 android:text="@string/uses_seven" />
             />
