@@ -73,7 +73,7 @@ public class Register extends Fragment {
                     if (pass.equals(repass)) {
                         Boolean checkuser = DB.checkusername(corr);
                         if (checkuser == false) {
-                            Boolean insert = DB.insertData(corr, pass);
+                            Boolean insert = DB.insertData(userName, corr, pass, repass);
                             if (insert == true) {
                                 Toast.makeText(getContext(), "Registrado correctamente", Toast.LENGTH_SHORT).show();
                                 Intent intent = new Intent(getContext(), MainActivity.class);
@@ -82,7 +82,7 @@ public class Register extends Fragment {
                                 Toast.makeText(getContext(), "Registro fallido", Toast.LENGTH_SHORT).show();
                             }
                         } else {
-                            Toast.makeText(getContext(), "¡El usuario ya existe! Por favor, registrese", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getContext(), "¡El usuario ya existe! Por favor, registrese con otro correo", Toast.LENGTH_SHORT).show();
                         }
                     } else {
                         Toast.makeText(getContext(), "Las contraseñas no coinciden", Toast.LENGTH_SHORT).show();

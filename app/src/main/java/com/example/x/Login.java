@@ -20,7 +20,7 @@ import DataBase.DBusuario;
 
 public class Login extends Fragment {
 
-    EditText username, password, confirssword;
+    EditText email, password, confirssword;
     Button login, register;
     DBusuario DB;
     CallbackFragment callbackFragment;
@@ -47,7 +47,7 @@ public class Login extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_login, container, false);
 
-        username = view.findViewById(R.id.txtUser);
+        email = view.findViewById(R.id.txtUser);
         password =  view.findViewById(R.id.txtPassword);
         login =  view.findViewById(R.id.btnLogin);
         register =  view.findViewById(R.id.btnRegister);
@@ -66,13 +66,13 @@ public class Login extends Fragment {
             @Override
             public void onClick(View view) {
 
-                String user = username.getText().toString();
+                String correo = email.getText().toString();
                 String pass = password.getText().toString();
 
-                if(user.equals("")||pass.equals(""))
+                if(correo.equals("")||pass.equals(""))
                     Toast.makeText(getContext(), "Por favor ingrese todos los campos", Toast.LENGTH_SHORT).show();
                 else{
-                    Boolean checkuserpass = DB.checkusernamepassword(user, pass);
+                    Boolean checkuserpass = DB.checkemailpassword(correo, pass);
                     if(checkuserpass==true){
                         Toast.makeText(getContext(), "Inicio de sesión exitoso", Toast.LENGTH_SHORT).show();
                         Intent intent  = new Intent(getContext(), MenuActivity.class);
