@@ -6,7 +6,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import com.example.x.Registro;
+//import com.example.x.Registro;
 
 import java.sql.Date;
 import java.util.ArrayList;
@@ -129,7 +129,7 @@ public class DBusuario extends SQLiteOpenHelper {
         else
             return true;
     }
-
+ /*
     public List<Registro> mostrarregistros(){
         SQLiteDatabase db= getReadableDatabase();
         Cursor cursor= db.rawQuery("SELECT * FROM TABLA_REGISTRO_CAB, TABLA_REGISTRO_DET, TABLA_CATEGORIAS, TABLA_PLASTICOS",null);
@@ -157,6 +157,6 @@ public class DBusuario extends SQLiteOpenHelper {
         }
         return registros;
     }
-
+*/
 
 }

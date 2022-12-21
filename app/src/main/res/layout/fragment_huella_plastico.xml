@@ -4,14 +4,100 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".HuellaPlasticoFragment"
-    android:background="#ffccee">
+    android:orientation="vertical"
+    android:padding="10dp"
+    >
 
     <TextView
+        android:id="@+id/textViewBotellas"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/HuellaPlastico"
-        android:textSize="35sp"
-        android:gravity="center"
-        />
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:layout_marginTop="20dp"
+        android:textStyle="bold"
+        android:text="Botellas" />
 
+    <EditText
+        android:id="@+id/editTextNumBotellas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:textAlignment="center"
+        android:inputType="textPersonName"
+        android:layout_marginRight="100dp"
+        android:layout_marginLeft="100dp"
+        android:text="0" />
+
+    <TextView
+        android:id="@+id/textViewProdLimp"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:text="Producto Limpieza" />
+
+    <EditText
+        android:id="@+id/editTextPrudLimpCant"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:textAlignment="center"
+        android:inputType="textPersonName"
+        android:layout_marginRight="100dp"
+        android:layout_marginLeft="100dp"
+        android:text="0" />
+
+    <TextView
+        android:id="@+id/textViewProDesech"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:text="Productos Desechables" />
+
+    <EditText
+        android:id="@+id/editTextProDesechCant"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:textAlignment="center"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:layout_marginRight="100dp"
+        android:layout_marginLeft="100dp"
+        android:text="0" />
+
+    <TextView
+        android:id="@+id/textViewRespuestaTitle"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:text="Tu Huella es: " />
+
+    <TextView
+        android:id="@+id/textViewRespuesta"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:textAlignment="center"
+        android:hint="0" />
+
+
+    <Button
+        android:id="@+id/buttonCalcular"
+        android:layout_width="385dp"
+        android:textSize="25sp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="#96E17B"
+
+        android:text="CALCULAR" />
 </LinearLayout>
