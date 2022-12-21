@@ -10,7 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.x.R;
-import com.example.x.data.model.TipsModel;
+import com.example.x.entities.TipsModel;
 
 public class RecyclerViewTipsAdapter extends RecyclerView.Adapter<RecyclerViewTipsAdapter.MyViewHolder>{
 

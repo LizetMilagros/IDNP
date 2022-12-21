@@ -6,6 +6,7 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -20,10 +21,13 @@ public class MainActivity extends AppCompatActivity implements CallbackFragment 
     FragmentManager fragmentManager;
     FragmentTransaction fragmentTransaction;
 
+    SharedPreferences preferences;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        validarSesion();
         addFragment();
     }
 
@@ -48,5 +52,17 @@ public class MainActivity extends AppCompatActivity implements CallbackFragment 
     @Override
     public void changeFragment() {
         replaceFragment();
+    }
+
+    private  void validarSesion(){
+        preferences = getSharedPreferences("Preferences", MODE_PRIVATE);
+        int usuario_id = preferences.getInt("usuario_id", 0);
+        String usuario_username = preferences.getString("usuario_username", null);
+        String usuario_email = preferences.getString("usuario_email", null);
+
+        if(usuario_id>0 && usuario_username!=null && usuario_email!=null){
+            Intent intent  = new Intent(this, MenuActivity.class);
+            startActivity(intent);
+        }
     }
 }

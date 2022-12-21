@@ -7,15 +7,20 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.ContextMenu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 
 import com.google.android.material.navigation.NavigationView;
 
 public class MenuActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
+    private TextView nombreUsuario, nombreCorreo;
+    private SharedPreferences preferences;
     private DrawerLayout drawerLayout;
     public static Toolbar toolbar;
     @Override
@@ -23,14 +28,30 @@ public class MenuActivity extends AppCompatActivity implements NavigationView.On
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
 
-
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        //
+        NavigationView navView= findViewById(R.id.main_navigationview);
+        View headerLayout=navView.getHeaderView(0);
+        nombreUsuario = headerLayout.findViewById(R.id.nombreUsuario);
+        nombreCorreo = headerLayout.findViewById(R.id.nombreCorreo);
+
+        preferences = getSharedPreferences("Preferences", MODE_PRIVATE);
+
+        int usuario_id = preferences.getInt("usuario_id", 0);
+        String usuario_username = preferences.getString("usuario_username", null);
+        String usuario_email = preferences.getString("usuario_email", null);
+
+        if(usuario_id>0 && usuario_username!=null && usuario_email!=null){
+            nombreUsuario.setText(usuario_username);
+            nombreCorreo.setText(usuario_email);
+        }
+        //
 
         drawerLayout = findViewById(R.id.menuPlasticos);
         NavigationView navigationView = findViewById(R.id.main_navigationview);
         navigationView.setNavigationItemSelectedListener(this);
-
 
         ActionBarDrawerToggle actionBarDrawerToggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar,
                 R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -81,10 +102,18 @@ public class MenuActivity extends AppCompatActivity implements NavigationView.On
                 getSupportFragmentManager().beginTransaction().replace(R.id.main_fragment,
                         new EstadisticaPlasticoFragment()).commit();
                 break;
+            case R.id.cerrarSesion:
+                cerrarSesion();
+                Intent intent  = new Intent(this, MainActivity.class);
+                startActivity(intent);
+                break;
         }
 
         drawerLayout.closeDrawer(GravityCompat.START);
         return true;
     }
 
+    private void cerrarSesion(){
+        preferences.edit().clear().apply();
+    }
 }

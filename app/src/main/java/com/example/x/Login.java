@@ -16,21 +16,23 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.x.entities.Usuario;
+
 import DataBase.DBusuario;
 
 public class Login extends Fragment {
 
-    EditText email, password, confirssword;
+    EditText email, password;
     Button login, register;
     DBusuario DB;
     CallbackFragment callbackFragment;
-    SharedPreferences sharedPreferences;
-    SharedPreferences.Editor editor;
+
+    SharedPreferences preferences;
+    Usuario usuario;
 
     @Override
     public void onAttach(@NonNull Context context) {
-        sharedPreferences = context.getSharedPreferences("userFile",Context.MODE_PRIVATE);
-        editor = sharedPreferences.edit();
+        preferences = context.getSharedPreferences("Preferences", Context.MODE_PRIVATE);
         super.onAttach(context);
     }
 
@@ -72,9 +74,17 @@ public class Login extends Fragment {
                 if(correo.equals("")||pass.equals(""))
                     Toast.makeText(getContext(), "Por favor ingrese todos los campos", Toast.LENGTH_SHORT).show();
                 else{
-                    Boolean checkuserpass = DB.checkemailpassword(correo, pass);
-                    if(checkuserpass==true){
+                    usuario = DB.checkemailpassword(correo, pass);
+                    if(usuario != null){
                         Toast.makeText(getContext(), "Inicio de sesión exitoso", Toast.LENGTH_SHORT).show();
+
+                        SharedPreferences.Editor editor = preferences.edit();
+                        editor.putInt("usuario_id", usuario.getId());
+                        editor.putString("usuario_username", usuario.getUsername());
+                        editor.putString("usuario_email", usuario.getEmail());
+                        //editor.putString("usuario_password", usuario.getPassword());
+                        editor.apply();
+
                         Intent intent  = new Intent(getContext(), MenuActivity.class);
                         startActivity(intent);
                     }else{

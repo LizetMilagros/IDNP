@@ -11,7 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.x.Adapter.RecyclerViewTipsAdapter;
-import com.example.x.data.model.TipsModel;
+import com.example.x.entities.TipsModel;
 
 
 public class TipsPlasticoFragment extends Fragment {

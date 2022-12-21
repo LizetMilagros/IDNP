@@ -1,11 +1,12 @@
 package DataBase;
 
+import android.annotation.SuppressLint;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-
+import com.example.x.entities.Usuario;
 //import com.example.x.Registro;
 
 import java.sql.Date;
@@ -13,6 +14,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class DBusuario extends SQLiteOpenHelper {
+
+    Usuario usuario;
     public static final String DBNAME = "Login.db";
 
     public static final String TABLA_USUARIOS = "usuarios";
@@ -75,13 +78,13 @@ public class DBusuario extends SQLiteOpenHelper {
         onCreate(MyDB);
     }
 
-    public Boolean insertData(String username, String correo, String password, String repassword){
+    public Boolean insertUsuario(Usuario usuario){
         SQLiteDatabase MyDB = this.getWritableDatabase();
         ContentValues contentValues= new ContentValues();
-        contentValues.put("username", username);
-        contentValues.put("email", correo);
-        contentValues.put("password", password);
-        contentValues.put("repassword", repassword);
+        contentValues.put("username", usuario.getUsername());
+        contentValues.put("email", usuario.getEmail());
+        contentValues.put("password", usuario.getPassword());
+        contentValues.put("repassword", usuario.getRepassword());
         long result = MyDB.insert(TABLA_USUARIOS, null, contentValues);
         if(result==-1) return false;
         else
@@ -97,14 +100,25 @@ public class DBusuario extends SQLiteOpenHelper {
             return false;
     }
 
-    public Boolean checkemailpassword(String email, String password){
+    @SuppressLint("Range")
+    public Usuario checkemailpassword(String email, String password){
         SQLiteDatabase MyDB = this.getWritableDatabase();
         Cursor cursor = MyDB.rawQuery("Select * from "+ TABLA_USUARIOS +" where email = ? and password = ?", new String[] {email,password});
-        if(cursor.getCount()>0)
-            return true;
+        if(cursor.getCount()>0){
+            cursor.moveToFirst();
+            usuario = new Usuario();
+            usuario.setId(Integer.parseInt(cursor.getString(cursor.getColumnIndex("user_id"))));
+            usuario.setUsername(cursor.getString(cursor.getColumnIndex("username")));
+            usuario.setEmail(email);
+            usuario.setPassword(password);
+            usuario.setRepassword(cursor.getString(cursor.getColumnIndex("repassword")));
+            return usuario;
+        }
+        //return true;
         else
-            return false;
+            return null;
     }
+
     public Boolean registrodeplastico(String descripcion,String cantidad,String categoria){
         SQLiteDatabase MyDB = this.getWritableDatabase();
         ContentValues registrocab= new ContentValues();

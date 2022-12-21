@@ -17,6 +17,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.x.entities.Usuario;
+
 import DataBase.DBusuario;
 
 public class Register extends Fragment {
@@ -24,14 +26,10 @@ public class Register extends Fragment {
     EditText user,correo, password, confirmPassword;
     Button login, register;
     DBusuario DB;
-    CallbackFragment callbackFragment;
-    SharedPreferences sharedPreferences;
-    SharedPreferences.Editor editor;
+    Usuario usuario;
 
     @Override
     public void onAttach(@NonNull Context context) {
-        sharedPreferences = context.getSharedPreferences("userFile",Context.MODE_PRIVATE);
-        editor = sharedPreferences.edit();
         super.onAttach(context);
     }
 
@@ -43,13 +41,11 @@ public class Register extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
     }
 
     @Nullable
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_register, container, false);
 
         user = view.findViewById(R.id.txtName);
@@ -73,7 +69,9 @@ public class Register extends Fragment {
                     if (pass.equals(repass)) {
                         Boolean checkuser = DB.checkusername(corr);
                         if (checkuser == false) {
-                            Boolean insert = DB.insertData(userName, corr, pass, repass);
+                            usuario = new Usuario(userName, corr, pass, repass);
+                            //Boolean insert = DB.insertData(userName, corr, pass, repass);
+                            Boolean insert = DB.insertUsuario(usuario);
                             if (insert == true) {
                                 Toast.makeText(getContext(), "Registrado correctamente", Toast.LENGTH_SHORT).show();
                                 Intent intent = new Intent(getContext(), MainActivity.class);

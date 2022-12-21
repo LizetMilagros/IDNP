@@ -28,6 +28,10 @@
             android:id="@+id/estadisticaPlastico"
             android:icon="@drawable/estadistica"
             android:title="Estadisticas de Plastico" />
+        <item
+            android:id="@+id/cerrarSesion"
+            android:icon="@drawable/salir"
+            android:title="Cerrar Sesión" />
 
     </group>
 

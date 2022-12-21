@@ -1,4 +1,4 @@
-package com.example.x.data.model;
+package com.example.x.entities;
 
 public class TipsModel {
     private String title;
