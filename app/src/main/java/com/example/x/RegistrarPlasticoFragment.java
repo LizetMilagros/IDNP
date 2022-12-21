@@ -67,7 +67,7 @@ public class RegistrarPlasticoFragment extends Fragment {
         foto=view.findViewById(R.id.foto);
         //ver las opciones del combo box
         spinner=(Spinner)view.findViewById(R.id.spinner);
-        String [] opciones ={"tipo1","tipo2","tipo3"};
+        String [] opciones ={"PET","PEHD","PVC","PEBD","PP","PS","Otro"};
         ArrayAdapter <String> adapter=new ArrayAdapter <String>(view.getContext(),android.R.layout.simple_spinner_item,opciones);
         spinner.setAdapter(adapter);
 
