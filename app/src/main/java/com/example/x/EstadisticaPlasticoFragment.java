@@ -17,7 +17,6 @@ public class EstadisticaPlasticoFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_estadistica_plastico,container,false);
         Integer[] a = {10,20,60,40,35,30,5,};
         String[] horizontal = {"PET","PEHD","PVC","PEBD","PP","PS","Otro"};
-
         List<Integer> vertical = new ArrayList<Integer>();
         vertical.add(10);
         vertical.add(20);
@@ -26,10 +25,8 @@ public class EstadisticaPlasticoFragment extends Fragment {
         vertical.add(35);
         vertical.add(30);
         vertical.add(5);
-
         ViewBarChart grafico = view.findViewById(R.id.grafico);
         grafico.setDatos(horizontal,vertical);
-
         return  view;
     }
 }

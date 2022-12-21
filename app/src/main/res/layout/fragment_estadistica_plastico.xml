@@ -15,7 +15,7 @@
         android:layout_height="364dp"
         android:layout_marginHorizontal="15dp"
         android:layout_marginTop="36dp"
-        android:background="@android:color/holo_green_light" />
+        android:background="@android:color/white" />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
