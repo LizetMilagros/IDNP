@@ -15,15 +15,8 @@ public class EstadisticaPlasticoFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater,@Nullable ViewGroup container,@Nullable
             Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_estadistica_plastico,container,false);
-
-        List<String> horizontal = new ArrayList<String>();
-        horizontal.add("PET");
-        horizontal.add("PEHD");
-        horizontal.add("PVC");
-        horizontal.add("PEBD");
-        horizontal.add("PP");
-        horizontal.add("PS");
-        horizontal.add("Otro");
+        Integer[] a = {10,20,60,40,35,30,5,};
+        String[] horizontal = {"PET","PEHD","PVC","PEBD","PP","PS","Otro"};
 
         List<Integer> vertical = new ArrayList<Integer>();
         vertical.add(10);
