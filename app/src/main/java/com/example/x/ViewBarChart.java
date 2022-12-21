@@ -6,6 +6,8 @@ import android.graphics.Paint;
 import android.util.AttributeSet;
 import android.view.View;
 import androidx.annotation.Nullable;
+
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,7 +21,7 @@ public class ViewBarChart extends View {
     private int paddingButton = 100;
     private int tamañoLetra = 35;
     private int tamañoIntervalos = 10;
-    private List<String> datosHorizontales = new ArrayList<String>();
+    private String[ ] datosHorizontales = new String[7];
     private List<Integer> datosVerticales = new ArrayList<Integer>();
 
     public ViewBarChart(Context context) {
@@ -37,12 +39,12 @@ public class ViewBarChart extends View {
         configurarPaint();
     }
 
-    public void setDatos(List<String> datosHorizontales, List<Integer> datosVerticales) {
-        if (datosHorizontales.size() == datosVerticales.size()) {
+    public void setDatos(String[] datosHorizontales, List<Integer> datosVerticales) {
+        if (datosHorizontales.length == datosVerticales.size()) {
             this.datosHorizontales = datosHorizontales;
             this.datosVerticales = datosVerticales;
         } else {
-            //No se pudo asignar datos por incompatibilidad
+            //no muestra nada
         }
     }
 
@@ -58,25 +60,21 @@ public class ViewBarChart extends View {
     public void onDraw(Canvas canvas) {
         altoCanvas = canvas.getHeight();
         anchoCanvas = canvas.getWidth();
-        //Calculo de ancho de cada barra
-        anchoBarra = (anchoCanvas - paddingLeft - 20) / datosHorizontales.size();
+        anchoBarra = (anchoCanvas - paddingLeft - 20) / datosHorizontales.length;
 
-        //Determinar valorMaximo de datosVerticales
         for (int i = 0; i < datosVerticales.size(); i++) {
             valorMaximo = Math.max(valorMaximo, datosVerticales.get(i));
         }
 
-        //Dibujar etiquetas verticales en un tamaño de intervalos establecido o por defecto
         for (int valorActual = 0; valorActual < valorMaximo; valorActual += tamañoIntervalos) {
             canvas.drawText(valorActual + "", 40, altoCanvas - paddingButton - ((altoCanvas - paddingButton) / valorMaximo) * valorActual, paint);
         }
 
-        //Dibujar barras
-        for (int i = 0; i < datosHorizontales.size(); i++) {
+        for (int i = 0; i < datosHorizontales.length; i++) {
             int corXBarraI = anchoBarra * (i) + paddingLeft;
             int corYBarraI = ((altoCanvas - paddingButton) / valorMaximo) * datosVerticales.get(i) + paddingButton;
             canvas.drawRect(corXBarraI + 5, altoCanvas - corYBarraI, corXBarraI + anchoBarra, altoCanvas - paddingButton, paint);
-            canvas.drawText(datosHorizontales.get(i), corXBarraI + anchoBarra / 2, altoCanvas - 70, paint);
+            canvas.drawText(datosHorizontales[i], corXBarraI + anchoBarra / 2, altoCanvas - 70, paint);
         }
     }
 
