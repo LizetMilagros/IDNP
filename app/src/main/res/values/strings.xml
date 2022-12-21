@@ -34,6 +34,7 @@
     <string name="descripcion">Descripcion</string>
     <string name="agregue_una_foto">Agregue una foto</string>
     <string name="plastico">plastico</string>
+    <string name="huella">Calcula tu Huella de plastico</string>
 
 
     <string name="code_one_name">PET</string>

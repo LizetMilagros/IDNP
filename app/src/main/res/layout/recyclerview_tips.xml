@@ -18,13 +18,13 @@
 
     <TextView
         android:id="@+id/textViewTips"
-        android:layout_width="295dp"
-        android:layout_height="126dp"
+        android:layout_width="278dp"
+        android:layout_height="109dp"
         android:layout_margin="16dp"
 
         android:layout_marginTop="16dp"
         android:text="vaccine"
-        android:textSize="18sp"
+        android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/imageViewTips"

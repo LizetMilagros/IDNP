@@ -12,9 +12,9 @@
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerViewTips2"
-            android:layout_width="385dp"
+            android:layout_width="388dp"
 
-            android:layout_height="wrap_content" />
+            android:layout_height="712dp" />
 
 
     </LinearLayout>

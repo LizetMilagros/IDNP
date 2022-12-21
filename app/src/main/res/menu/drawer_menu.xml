@@ -6,27 +6,27 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/misRegistros"
-            android:icon="@drawable/lista"
+            android:icon="@mipmap/lista"
             android:title="Mis Registros" />
         <item
             android:id="@+id/tiposPlastico"
-            android:icon="@drawable/tipos"
+            android:icon="@mipmap/tipos"
             android:title="Tipos De Plastico" />
         <item
             android:id="@+id/registrarPlastico"
-            android:icon="@drawable/registrar"
+            android:icon="@mipmap/registrar"
             android:title="Registrar Plastico" />
         <item
             android:id="@+id/huellaPlastico"
-            android:icon="@drawable/huellas"
+            android:icon="@mipmap/huellas"
             android:title="Huella de Plastico" />
         <item
             android:id="@+id/tipsPlastico"
-            android:icon="@drawable/tips"
+            android:icon="@mipmap/tips"
             android:title="Tips De Plastico" />
         <item
             android:id="@+id/estadisticaPlastico"
-            android:icon="@drawable/estadistica"
+            android:icon="@mipmap/estadistica"
             android:title="Estadisticas de Plastico" />
         <item
             android:id="@+id/cerrarSesion"
