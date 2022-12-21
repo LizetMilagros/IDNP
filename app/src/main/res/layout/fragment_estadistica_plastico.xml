@@ -1,17 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".EstadisticaPlasticoFragment"
-    android:background="#ffccee">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".EstadisticaPlasticoFragment">
 
-    <TextView
+    <View
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/Estadisticas"
-        android:textSize="35dp"
+        android:background="@color/white" />
+    <View
+        android:layout_width="364dp"
+        android:layout_height="364dp"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginTop="36dp"
+        android:background="@android:color/holo_green_light" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
         android:gravity="center"
-        />
-
-</LinearLayout>
+        android:paddingTop="12dp"
+        android:text="@string/Estadisticas"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        tools:ignore="TextContrastCheck" />
+    <com.example.x.ViewBarChart
+        android:id="@+id/grafico"
+        android:layout_width="358dp"
+        android:layout_height="336dp"
+        android:layout_marginHorizontal="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="64dp" />
+</RelativeLayout>
