@@ -79,25 +79,15 @@ public class RegistrarPlasticoFragment extends Fragment {
                 String cantidad= quantidad.getText().toString();
                 if (descripcion.equals("")||cantidad.equals(""))
                     Toast.makeText(getContext(), "Por favor llene todos los campos", Toast.LENGTH_SHORT).show();
-                else if(DB.buscarrepetidos(cantidad)){
+                /*else if(DB.buscarrepetidos(cantidad)){
                     Toast.makeText(getContext(), "Ya existe", Toast.LENGTH_SHORT).show();
-                }
+                }*/
                 else {
-                    DB.guardarnuevoplastico(descripcion,cantidad, tipo);
+                    DB.registrodeplastico(descripcion,cantidad, tipo);
                     Toast.makeText(getContext(), "Registrado correctamente", Toast.LENGTH_SHORT).show();
                 }
             }
         });
-        //para ver si se guardó xd, no se si funca
-
-        /*cancelar.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view) {
-                prueba.setText(DB.tomarregistroprueba());
-                Toast.makeText(getContext(), "Registrado correctamente", Toast.LENGTH_SHORT).show();
-            }
-        });
-*/
-
         //para abrir la galería
         foto.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
