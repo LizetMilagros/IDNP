@@ -15,6 +15,7 @@
     <string name="TipsPlastico">Tips</string>
     <string name="HuellaPlastico">Huella</string>
     <string name="Estadisticas">Estadisticas</string>
+    <string name="infoEstadisticas">Gráfico de Barras de la cantidad de plástico generado por el usuario por tipo, desde la instalación de la Aplicación</string>
     <string name="menu_plasticos">Menu Plasticos</string>
     <string name="extra">extra</string>
     <string name="extra1">extra</string>
